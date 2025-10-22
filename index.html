@@ -12,5 +12,12 @@
 <p>Flèches ou WASD pour bouger</p>
 <div id="game"></div>
 <script src="./node_modules/@jfcmontmorency/dragon-smaug/dist/dragon-smaug.umd.js"></script>
+<script>const game = DragonSmaug.mount('#game', {
+    cols: 16,
+    rows: 8,
+    speedMs: 140,
+    onGameOver(score) { console.log("Score final:", score); }
+  });
+  game.start();</script>
 </body>
 </html>
